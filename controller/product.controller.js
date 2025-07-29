@@ -53,7 +53,7 @@ const allProducts = async (req, res)=>{
     }
     catch(err){
         console.error("Error fetching products:", err);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send(err.message);
     }
 }
 
